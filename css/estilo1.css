@@ -1,0 +1,57 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 25px;
+}
+.contenedor{
+    background-color: aqua;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr 7fr 1fr;
+    grid-template-areas: "header  header   header   header " 
+                         "main   main      main     main"
+                         "content1    content2   ads   ads "
+                         "footer   footer    footer   footer"
+    ;
+    gap: 10px;
+    
+}
+.contenedor .header{
+    background-color: yellow;
+    grid-column: header;
+}
+
+.contenedor .main{
+    background-color: green;
+    grid-column: main;
+}
+.contenedor .content1{
+    background-color: beige;
+    grid-column: content1;
+}
+.contenedor .content2{
+    background-color: beige;
+    grid-column: content2;
+}
+.contenedor .ads{
+    background-color: darkorange;
+    display: grid;
+    grid-column: ads;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    padding: 15px;
+    gap: 10px;
+}
+.contenedor .ads .hijo1{
+    background-color: blueviolet;
+    grid-row: 2/3;
+}
+.contenedor .ads .hijo2{
+    background-color: blueviolet;
+    grid-row: 3/4;
+}
+.contenedor .footer{
+    background-color: chartreuse;
+    grid-column: footer;
+}
